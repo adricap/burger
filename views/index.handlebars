@@ -1,14 +1,15 @@
-<h1 class="text-center">Eat-Da-Burger</h1>
-<a class="text-center" src="https://i.gifer.com/OF7u.gif"></a>
-
 <ul>
-    {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+    {{#each burgers}} 
+    {{#unless devoured}} 
+    {{> burgers devoured=true}} 
+    {{/unless}} 
+    {{/each}}
 </ul>
 
 <h2>Devoured</h2>
 
 <ul>
-    {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+    {{#each burgers}} {{#if devoured}} {{> burgers devoured=false}} {{/if}} {{/each}}
 </ul>
 
 <h2>Add Burger</h2>
